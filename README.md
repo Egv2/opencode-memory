@@ -1,5 +1,7 @@
 # opencode-memory
 
+<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/brain.svg" width="24" alt="brain" />
+
 File-based, zero-dependency project memory for OpenCode.
 
 No cloud. No vector database. No API keys. Just markdown files with YAML frontmatter: transparent, git-friendly, and human-readable.
@@ -15,6 +17,8 @@ OpenCode forgets everything between sessions. Existing memory layers (Mem0, Zep,
 - Secret-safe: never writes keys, tokens, or credentials
 
 ## Quick start
+
+<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/rocket.svg" width="20" alt="rocket" />
 
 ```bash
 git clone https://github.com/egv2/opencode-memory.git
@@ -37,6 +41,8 @@ curl -fsSL https://raw.githubusercontent.com/egv2/opencode-memory/main/install.s
 ```
 
 ## How it works
+
+<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/folder-open.svg" width="20" alt="folder" />
 
 ```
 ~/.opencode/memory/
@@ -70,6 +76,8 @@ Cross-reference topics with [[topic-slug]].
 
 ## Memory rules (injected into ~/.config/opencode/AGENTS.md)
 
+<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/gear.svg" width="20" alt="gear" />
+
 | Rule | Description |
 |---|---|
 | Bootstrap | Create project memory folder on first memory-worthy event, no prompt |
@@ -79,6 +87,8 @@ Cross-reference topics with [[topic-slug]].
 | Maintenance | Split files over 200 lines, dedup, stale cleanup, secret filter |
 
 ## Comparison
+
+<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/scales.svg" width="20" alt="scales" />
 
 | Feature | opencode-memory | Mem0 | Zep |
 |---|---|---|---|
@@ -91,6 +101,8 @@ Cross-reference topics with [[topic-slug]].
 
 ## What gets installed
 
+<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/package.svg" width="20" alt="package" />
+
 | File | Location | Purpose |
 |---|---|---|
 | SKILL.md | ~/.config/opencode/skills/opencode-memory/ | Skill definition |
@@ -100,6 +112,8 @@ Cross-reference topics with [[topic-slug]].
 | MEMORY.md | ~/.opencode/memory/ | Global index |
 
 ## Contributing
+
+<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/handshake.svg" width="20" alt="handshake" />
 
 PRs welcome. Please keep the skill dependency-free and the install script idempotent.
 
