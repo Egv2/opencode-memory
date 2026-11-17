@@ -1,25 +1,20 @@
-# 🧠 opencode-memory
+# opencode-memory
 
-**File-based, zero-dependency project memory for [OpenCode](https://opencode.ai).**
+File-based, zero-dependency project memory for OpenCode.
 
-No cloud. No vector database. No API keys. Just markdown files with YAML frontmatter — transparent, git-friendly, and human-readable.
+No cloud. No vector database. No API keys. Just markdown files with YAML frontmatter: transparent, git-friendly, and human-readable.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![OpenCode](https://img.shields.io/badge/OpenCode-compatible-blue.svg)](https://opencode.ai)
+## Why
 
----
+OpenCode forgets everything between sessions. Existing memory layers (Mem0, Zep, Letta) require cloud accounts, Docker stacks, or vector databases. opencode-memory gives you ZCode-style file-based memory with a single install script, and the agent manages it itself.
 
-## ✨ Why
+- Zero dependencies: pure markdown plus OpenCode's built-in file tools
+- Project-scoped: each project gets its own memory folder
+- Staleness guard: memories referencing deleted files get cleaned up
+- Self-maintaining: duplicate detection, size limits, periodic cleanup
+- Secret-safe: never writes keys, tokens, or credentials
 
-OpenCode forgets everything between sessions. Existing memory layers (Mem0, Zep, Letta) require cloud accounts, Docker stacks, or vector databases. `opencode-memory` gives you **ZCode-style file-based memory** with a single install script — and the agent manages it itself.
-
-- 🪶 **Zero dependencies** — pure markdown + OpenCode's built-in file tools
-- 📁 **Project-scoped** — each project gets its own memory folder
-- 🔍 **Staleness guard** — memories referencing deleted files get cleaned up
-- 🧹 **Self-maintaining** — duplicate detection, size limits, periodic cleanup
-- 🔒 **Secret-safe** — never writes keys, tokens, or credentials
-
-## 🚀 Quick Start
+## Quick start
 
 ```bash
 git clone https://github.com/egv2/opencode-memory.git
@@ -33,15 +28,15 @@ Restart OpenCode, then in any project:
 /memory-setup
 ```
 
-That's it. The lazy bootstrap rule also creates files automatically on the first memory-worthy event.
+That is it. The lazy bootstrap rule also creates files automatically on the first memory-worthy event.
 
-### One-liner (after publishing)
+One-liner (after publishing):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/egv2/opencode-memory/main/install.sh | bash
 ```
 
-## 📁 How It Works
+## How it works
 
 ```
 ~/.opencode/memory/
@@ -65,49 +60,49 @@ metadata:
   originSessionId: sess_abc123
 ---
 
-Cloudflare Pages production branch is `main`. Build format "file" is required.
+Cloudflare Pages production branch is main. Build format "file" is required.
 
-**Why:** Missing build format caused 308 redirects and Google indexing failures.
-**How to apply:** Always verify `build: { format: "file" }` in astro.config.mjs before deploy.
+Why: Missing build format caused 308 redirects and Google indexing failures.
+How to apply: Always verify build format "file" in astro.config.mjs before deploy.
 ```
 
-Cross-reference topics with `[[topic-slug]]`.
+Cross-reference topics with [[topic-slug]].
 
-## 🧠 Memory Rules (injected into `~/.config/opencode/AGENTS.md`)
+## Memory rules (injected into ~/.config/opencode/AGENTS.md)
 
 | Rule | Description |
 |---|---|
-| **Bootstrap** | Create project memory folder on first memory-worthy event (no prompt) |
-| **Recall** | Read indexes at session start; load only relevant topics |
-| **Write** | Create topic file + update index when durable info emerges |
-| **Scope** | Project-specific → project folder; universal → global index |
-| **Maintenance** | Split >200 lines, dedup, stale cleanup, secret filter |
+| Bootstrap | Create project memory folder on first memory-worthy event, no prompt |
+| Recall | Read indexes at session start, load only relevant topics |
+| Write | Create topic file and update index when durable info emerges |
+| Scope | Project-specific goes to project folder, universal goes to global index |
+| Maintenance | Split files over 200 lines, dedup, stale cleanup, secret filter |
 
-## 🆚 Comparison
+## Comparison
 
 | Feature | opencode-memory | Mem0 | Zep |
 |---|---|---|---|
-| Dependencies | None | Cloud SDK | Docker + Graph DB |
-| API key | No | Yes (m0-...) | Yes |
-| Semantic search | No (grep) | Yes | Yes (temporal graph) |
+| Dependencies | None | Cloud SDK | Docker plus graph DB |
+| API key | No | Yes | Yes |
+| Semantic search | No, grep based | Yes | Yes, temporal graph |
 | Auto-capture hooks | No | Yes | No |
-| Transparency | Full (markdown) | Dashboard | Dashboard |
+| Transparency | Full, markdown | Dashboard | Dashboard |
 | Offline | Yes | No | Self-host only |
 
-## 📦 What Gets Installed
+## What gets installed
 
 | File | Location | Purpose |
 |---|---|---|
-| `SKILL.md` | `~/.config/opencode/skills/opencode-memory/` | Skill definition |
-| `memory-setup.md` | `~/.config/opencode/commands/` | `/memory-setup` slash command |
-| `AGENTS.md` rules | `~/.config/opencode/AGENTS.md` | Global memory rules (idempotent) |
-| `template.md` | `~/.opencode/memory/` | Frontmatter template |
-| `MEMORY.md` | `~/.opencode/memory/` | Global index |
+| SKILL.md | ~/.config/opencode/skills/opencode-memory/ | Skill definition |
+| memory-setup.md | ~/.config/opencode/commands/ | /memory-setup slash command |
+| AGENTS.md rules | ~/.config/opencode/AGENTS.md | Global memory rules, idempotent |
+| template.md | ~/.opencode/memory/ | Frontmatter template |
+| MEMORY.md | ~/.opencode/memory/ | Global index |
 
-## 🤝 Contributing
+## Contributing
 
 PRs welcome. Please keep the skill dependency-free and the install script idempotent.
 
-## 📄 License
+## License
 
-MIT © 2026
+MIT, 2026
