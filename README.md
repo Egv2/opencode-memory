@@ -1,6 +1,6 @@
 # opencode-memory
 
-<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/brain.svg" width="24" alt="brain" />
+<img src="assets/icons/brain.svg" width="24" alt="brain" />
 
 File-based, zero-dependency project memory for OpenCode.
 
@@ -18,7 +18,7 @@ OpenCode forgets everything between sessions. Existing memory layers (Mem0, Zep,
 
 ## Quick start
 
-<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/rocket.svg" width="20" alt="rocket" />
+<img src="assets/icons/rocket.svg" width="20" alt="rocket" />
 
 ```bash
 git clone https://github.com/egv2/opencode-memory.git
@@ -42,7 +42,7 @@ curl -fsSL https://raw.githubusercontent.com/egv2/opencode-memory/main/install.s
 
 ## How it works
 
-<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/folder-open.svg" width="20" alt="folder" />
+<img src="assets/icons/folder-open.svg" width="20" alt="folder" />
 
 ```
 ~/.opencode/memory/
@@ -76,7 +76,7 @@ Cross-reference topics with [[topic-slug]].
 
 ## Memory rules (injected into ~/.config/opencode/AGENTS.md)
 
-<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/gear.svg" width="20" alt="gear" />
+<img src="assets/icons/gear.svg" width="20" alt="gear" />
 
 | Rule | Description |
 |---|---|
@@ -88,7 +88,7 @@ Cross-reference topics with [[topic-slug]].
 
 ## Comparison
 
-<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/scales.svg" width="20" alt="scales" />
+<img src="assets/icons/scales.svg" width="20" alt="scales" />
 
 | Feature | opencode-memory | Mem0 | Zep |
 |---|---|---|---|
@@ -101,7 +101,7 @@ Cross-reference topics with [[topic-slug]].
 
 ## What gets installed
 
-<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/package.svg" width="20" alt="package" />
+<img src="assets/icons/package.svg" width="20" alt="package" />
 
 | File | Location | Purpose |
 |---|---|---|
@@ -113,7 +113,7 @@ Cross-reference topics with [[topic-slug]].
 
 ## Contributing
 
-<img src="https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/handshake.svg" width="20" alt="handshake" />
+<img src="assets/icons/handshake.svg" width="20" alt="handshake" />
 
 PRs welcome. Please keep the skill dependency-free and the install script idempotent.
 
